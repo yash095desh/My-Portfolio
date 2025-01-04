@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.animated-image {
+  background-color: #b4b2f4;
+  animation: borderRadiusAnimation 5s infinite alternate ease-in-out; /* Animation */
+  overflow: hidden;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text is hidden beyond the container */
+  border-right: 2px solid black; /* Cursor effect */
+  white-space: nowrap; /* Keeps text on one line */
+  animation: typing 8s steps(22) infinite reverse,
+    blink-caret 1s step-end infinite;
+}
+.changeText {
+  will-change: transform;
+  animation: textchangeSmall 16s steps(2) infinite;
+}
+
+.floatingNavbar {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.2s ease-in-out;
+}
+
+.floatingNavbar.hide {
+  animation: slideDown 0.2s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.floatingNavbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes textchangeMedium {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-95px);
+  }
+}
+
+@keyframes textchangeSmall {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* Keyframes for changing the border-radius */
+@keyframes borderRadiusAnimation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; /* Top-left, top-right, bottom-right, bottom-left */
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .changeText {
+    animation: textchangeMedium 16s steps(2) infinite;
+  }
+}
