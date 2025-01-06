@@ -6,7 +6,7 @@ import OpenUrl from "./icons/OpenUrl";
 const Projects = ({ projects }) => {
   return (
     <div
-      className=" py-20 px-10 bg-[#F3F3F3] flex flex-col items-center justify-center "
+      className=" py-20 lg:px-10 bg-[#F3F3F3] flex flex-col items-center justify-center "
       id="Work"
     >
       <Title text={"My Work"} />
@@ -22,7 +22,7 @@ const Projects = ({ projects }) => {
           key={index}
         >
           {index % 2 === 0 && (
-            <div className=" relative w-full h-80 lg:basis-[60%] rounded-lg overflow-hidden">
+            <div className=" relative w-full h-60 lg:h-80 lg:basis-[60%] rounded-lg overflow-hidden">
               <Image
                 src={project.image}
                 fill

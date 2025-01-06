@@ -113,7 +113,7 @@ html {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .changeText {
     animation: textchangeMedium 16s steps(2) infinite;
   }
