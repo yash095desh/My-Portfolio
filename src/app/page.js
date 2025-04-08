@@ -77,6 +77,24 @@ export default function Home() {
       ],
       url: "https://food-ordering095-app.vercel.app/",
     },
+    {
+      image: "quickChat.svg",
+      title: "Quick Chat",
+      description:
+        "A real-time chat application built with the MERN stack and Socket.IO. Implements Google Sign-In for seamless authentication and secure user access. Designed to deliver smooth, responsive messaging across all devices. The UI is crafted with Tailwind CSS and Figma, ensuring a clean and intuitive user experience. Ideal for showcasing real-time communication capabilities and authentication workflows.",
+      skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "Tailwindcss",
+        "Figma",
+        "Nextjs",
+        "Google OAuth",
+      ],
+      url: "https://quick-chat-pearl-eta.vercel.app/",
+    },
   ];
 
   return (

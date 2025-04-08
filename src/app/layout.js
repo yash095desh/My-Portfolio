@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Portfolio ",
   description: "Simple Portfolio to showcase my skills,experience etc.",
+  icons:{
+    icon:"./logo.svg"
+  }
 };
 
 export default function RootLayout({ children }) {

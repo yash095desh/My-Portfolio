@@ -6,7 +6,7 @@ import OpenUrl from "./icons/OpenUrl";
 const Projects = ({ projects }) => {
   return (
     <div
-      className=" py-20 lg:px-10 bg-[#F3F3F3] flex flex-col items-center justify-center "
+      className=" py-20 px-4 lg:px-10 bg-[#F3F3F3] flex flex-col items-center justify-center "
       id="Work"
     >
       <Title text={"My Work"} />
@@ -22,14 +22,15 @@ const Projects = ({ projects }) => {
           key={index}
         >
           {index % 2 === 0 && (
-            <div className=" relative w-full h-60 lg:h-80 lg:basis-[60%] rounded-lg overflow-hidden">
-              <Image
-                src={project.image}
-                fill
-                alt="website Image"
-                className=" object-cover"
-              />
-            </div>
+            <div className="relative w-full rounded-lg overflow-hidden">
+            <Image
+              src={project.image}
+              alt="website Image"
+              width={600} 
+              height={400}
+              className="object-cover w-full h-auto rounded-lg"
+            />
+          </div>
           )}
           <div className=" flex flex-col gap-4 basis-[50%]">
             <h1 className=" text-2xl font-bold">{project.title}</h1>
@@ -51,14 +52,15 @@ const Projects = ({ projects }) => {
             </div>
           </div>
           {index % 2 !== 0 && (
-            <div className=" relative w-full h-80 lg:basis-[50%] rounded-lg overflow-hidden">
-              <Image
-                src={project.image}
-                fill
-                alt="Computer Icon"
-                className=" object-cover"
-              />
-            </div>
+           <div className="relative w-full rounded-lg overflow-hidden">
+           <Image
+             src={project.image}
+             alt="website Image"
+             width={600} 
+             height={400}
+             className="object-cover w-full h-auto rounded-lg"
+           />
+         </div>
           )}
         </div>
       ))}
