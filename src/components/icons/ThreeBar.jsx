@@ -8,22 +8,23 @@ const ThreeBar = () => {
       viewBox="0 0 26 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="text-black dark:text-white"
     >
       <path
         d="M1 1.80664H25"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         d="M1 9.80664H25"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         d="M1 17.8066H25"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
       />

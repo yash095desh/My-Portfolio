@@ -1,15 +1,6 @@
 "use client";
 import HomePage from "@/components/HomePage";
-import Copied from "@/components/icons/Copied";
-import Copy from "@/components/icons/Copy";
-import OpenUrl from "@/components/icons/OpenUrl";
 import Navbar from "@/components/Navbar";
-import Title from "@/components/Title";
-import Image from "next/image";
-import { useRef, useState } from "react";
-
-
-import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -61,6 +52,43 @@ export default function Home() {
 
   const projects = [
     {
+      image: "stayFinder.svg",
+      title: "StayFinder",
+      description:
+        "An end-to-end property booking platform built with the MERN stack and Next.js. Hosts can manage listings and view analytics on a custom dashboard, while users can reserve and confirm bookings via Razorpay. Unpaid bookings auto-expire after 2 hours using Inngest background jobs. The app features Clerk authentication, responsive UI with Tailwind & ShadCN, and smooth animations via Motion.",
+      skills: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Clerk Auth",
+        "Inngest",
+        "Razorpay",
+        "Tailwind CSS",
+        "ShadCN UI",
+        "Motion",
+      ],
+      url: "https://stay-finder-fawn.vercel.app",
+    },
+     {
+      image: "quickChat.svg",
+      title: "Quick Chat",
+      description:
+        "A real-time chat application built with the MERN stack and Socket.IO. Implements Google Sign-In for seamless authentication and secure user access. Designed to deliver smooth, responsive messaging across all devices. The UI is crafted with Tailwind CSS and Figma, ensuring a clean and intuitive user experience. Ideal for showcasing real-time communication capabilities and authentication workflows.",
+      skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "Tailwindcss",
+        "Figma",
+        "Nextjs",,
+      ],
+      url: "https://quick-chat-pearl-eta.vercel.app/",
+    },
+    {
       image: "foodOrderingWebsite.svg",
       title: "Food Ordering App",
       description:
@@ -76,37 +104,17 @@ export default function Home() {
         "Stripe",
       ],
       url: "https://food-ordering095-app.vercel.app/",
-    },
-    {
-      image: "quickChat.svg",
-      title: "Quick Chat",
-      description:
-        "A real-time chat application built with the MERN stack and Socket.IO. Implements Google Sign-In for seamless authentication and secure user access. Designed to deliver smooth, responsive messaging across all devices. The UI is crafted with Tailwind CSS and Figma, ensuring a clean and intuitive user experience. Ideal for showcasing real-time communication capabilities and authentication workflows.",
-      skills: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Socket.io",
-        "Tailwindcss",
-        "Figma",
-        "Nextjs",
-        "Google OAuth",
-      ],
-      url: "https://quick-chat-pearl-eta.vercel.app/",
-    },
+    }
   ];
 
   return (
-    <div className=" lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto">
+    <div className="lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto">
       {/* NavBar */}
       <Navbar />
       {/* Hero-Section */}
       <HomePage />
-      {/* About */}
-      <About />
       {/* Skills */}
-      <Skills skills={skills} />
+      <Skills />
       {/* Work */}
       <Projects projects={projects} />
       {/* Contact Form */}
